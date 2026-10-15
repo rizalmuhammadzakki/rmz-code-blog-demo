@@ -3,81 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <meta name="author" content="Rizal Muhammad Zakki" />
+  <meta name="description" content="A beginner-friendly introduction to HTML and the fundamentals of the web." />
+  <link rel="stylesheet" href="styles.css" />
+  <title>RMZ | Code Blog Demo</title>
 </head>
 <body>
-  <header><h1>Code Blog Demo</h1>
-    <nav>
-      <a href="#">Blog</a>
-      <a href="#">Demo</a>
-      <a href="#">Flexbox</a>
-      <a href="#">CSS Grid</a>
-    </nav>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="site-title"><a href="#top">Code Blog Demo</a></h1>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#blog">Blog</a>
+        <a href="#demo">Demo</a>
+        <a href="#flexbox">Flexbox</a>
+        <a href="#css-grid">CSS Grid</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <article>
-      <section>
-        <header>
-          <h2>The Basic Language: HTML</h2>
-          <img src="monkey-d.jpg" width="50" alt="Monkey D. Luffy" title="The Author" /><br />
-          <span>Posted by <b>Monkey D. Luffy</b> on <time>Friday, September 27th 2024</time>.</span>
-        </header>
-        <figure style="margin: 0;">
-          <img src="post-img.jpg" width="500" alt="HTML code" />
-          <figcaption>HTML code written in code editor</figcaption>
+
+  <main id="top">
+    <article class="post" id="blog">
+      <section class="post-section">
+        <h2>The Basic Language: HTML</h2>
+        <div class="post-meta">
+          <img class="author-avatar" src="monkey-d.jpg" alt="Monkey D. Luffy" title="The Author" />
+          <div>Posted by <strong>Monkey D. Luffy</strong><time datetime="2024-09-27">Friday, September 27th 2024</time></div>
+        </div>
+        <figure class="hero-figure">
+          <img src="post-img.jpg" alt="HTML code displayed in a code editor" />
+          <figcaption>HTML code written in a code editor</figcaption>
         </figure>
-        <p>All modern websites and web applications are built using three <em>fundamental</em> technologies: <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading StyleSheet">CSS</abbr>, and JavaScript. These are the languages of the web.</p>
+        <p>All modern websites and web applications are built using three <em>fundamental</em> technologies: <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, and JavaScript. These are the languages of the web.</p>
         <p>In this post, let's focus on HTML. We will learn what <abbr title="HyperText Markup Language">HTML</abbr> is all about, and why you too should learn it.</p>
       </section>
-      <section>
+
+      <section class="post-section" id="demo">
         <h2>What is HTML?</h2>
         <p>HTML stands for <b>H</b>yper<b>T</b>ext <b>M</b>arkup <b>L</b>anguage. It's a markup language that web developers use to structure and describe the content of a webpage (HTML isn't a programming language).</p>
         <p>HTML consists of elements that describe different types of content: paragraphs, links, headings, images, video, etc. Web browsers understand HTML and render HTML code as websites.</p>
-        <p>In HTML, each element is made up of 3 parts:
-          <ol>
-            <li>The opening tag</li>
-            <li>The closing tag</li>
-            <li>The actual element</li>
-          </ol>
-          You can learn more at the <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>.
-        </p>
+        <p>In HTML, each element is made up of 3 parts:</p>
+        <ol>
+          <li>The opening tag</li>
+          <li>The closing tag</li>
+          <li>The actual element</li>
+        </ol>
+        <p>You can learn more at the <a href="https://developer.mozilla.org/en-US/">MDN Web Docs</a>.</p>
       </section>
-      <section>
+
+      <section class="post-section" id="flexbox">
         <h2>Why should you learn HTML?</h2>
-        <p>There are countless reasons for learning the fundamental language of the web. Here are 5 of them:
-          <ul>
-            <li>To be able to use the fundamental web dev language</li>
-            <li>To hand-craft beautiful websites instead of relying on tools like Wordpress or Wix</li>
-            <li>To build web applications</li>
-            <li>To impress friends</li>
-            <li>To have fun😈🤘🏻</li>
-          </ul>
-        </p>
+        <p>There are countless reasons for learning the fundamental language of the web. Here are 5 of them:</p>
+        <ul class="reason-list">
+          <li>To be able to use the fundamental web development language</li>
+          <li>To hand-craft beautiful websites instead of relying on tools like WordPress or Wix</li>
+          <li>To build web applications</li>
+          <li>To impress friends</li>
+          <li>To have fun 😈🤘🏻</li>
+        </ul>
       </section>
+      <span id="css-grid" aria-hidden="true"></span>
     </article>
-    <section id="related-posts">
-      <h3>Related posts</h3>
-      <ul>
-        <li style="margin-bottom: 17px;">
-          <img src="related-1.jpg" width="70" alt="A guy codes on the laptop" /><a href="#">How to Learn Web Development</a><br />
-          <span>By Jonas Schmedtmann</span>
+
+    <aside class="related-posts" aria-labelledby="related-heading">
+      <h3 id="related-heading">Related posts</h3>
+      <ul class="related-list">
+        <li>
+          <img src="related-1.jpg" alt="A person coding on a laptop" />
+          <div><a href="#">How to Learn Web Development</a><span>By Jonas Schmedtmann</span></div>
         </li>
-        <li style="margin-bottom: 17px;">
-          <img src="related-2.jpg" width="70" alt="A thunder in the sky" /><a href="#">The Unknown Powers of CSS</a><br />
-          <span>By Jim Dillon</span>
+        <li>
+          <img src="related-2.jpg" alt="Lightning in a stormy sky" />
+          <div><a href="#">The Unknown Powers of CSS</a><span>By Jim Dillon</span></div>
         </li>
-        <li style="margin-bottom: 17px;">
-          <img src="related-3.jpg" width="70" alt="Snippet of JavaScript code" /><a href="#">Learn JavaScript for Web Development</a><br />
-          <span>By John "Soap" McTavish</span>
+        <li>
+          <img src="related-3.jpg" alt="A snippet of JavaScript code" />
+          <div><a href="#">Learn JavaScript for Web Development</a><span>By John "Soap" McTavish</span></div>
         </li>
       </ul>
-    </section>
+    </aside>
   </main>
-  <footer style="margin-top: 27px; text-align: center;">
-    <ul style="list-style: none;">
-      <li>Author: Rizal Muhammad Zakki</li>
-      <li>NIM: 10222009</li>
-    </ul>
+
+  <footer class="site-footer">
+    <p>Author: Rizal Muhammad Zakki</p>
+    <p>NIM: 10222009</p>
   </footer>
 </body>
 </html>
